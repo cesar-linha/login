@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head>
+
+
+<style>
+
+
+</style>
+
+<title>Principal</title>
+
+</h:head>
+
+<h:body>
+   <p:layout fullPage="">
+ 
+    <p:layoutUnit position="north" resizable="true" size="200" minSize="0">
+    	<div>
+        <p:graphicImage value="/imagens/Sol_Graficas-270x250.jpg" size="210" minSize="250" width="1900px" height="170px" style="width: 1200px ; margin-left: 5px; margin-right: 5px;" />
+    	</div>
+    </p:layoutUnit>
+ 	
+ 	 <h:form> 
+ 	 <p:growl id="messages" /> 
+            <p:menubar id="menubar">
+                <p:submenu label="Home" >
+                    <p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+
+                <p:submenu label="Livros" >
+					<p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+                
+                <p:submenu label="Livros Digitais" >
+					<p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+                
+                <p:submenu label="Papelaria e Escritorio" >
+					<p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+                
+                <p:submenu label="Informatica e Impressao" >
+					<p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+                
+                <p:submenu label="Musicas e Filmes" >
+					<p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+                
+                <p:submenu label="Entre ou Cadastre-se" >
+					<p:menuitem value="Login" url="http://localhost:8080/papelarialinhares/Login.xhtml"/>
+					<p:menuitem value="Cadastro" url="http://localhost:8080/papelarialinhares/cadastroteste.xhtml"/>
+                </p:submenu> 
+            </p:menubar>
+ 	</h:form>		
+    <p:layoutUnit position="west" size="230" header="Esquerda" resizable="true">
+        <h:outputText value="conteudo da esquerda" />
+        
+         <h:form> 
+            <p:menubar id="menubar">
+                <p:submenu label="" >
+                    <p:menuitem value="1" url="#"/>
+                    <p:menuitem value="2" url="#"/>
+                    <p:menuitem value="3" url="#"/>
+                    <p:menuitem value="4" url="#"/>
+                    <p:menuitem value="5" url="#"/>
+                </p:submenu> 
+        </p:menubar>
+        </h:form>
+    </p:layoutUnit>
+ 
+    <p:layoutUnit position="east" size="230" header="Direita" resizable="true" effect="drop">
+        <h:outputText value="Conteudo da direita" />
+    </p:layoutUnit>
+ 
+    <p:layoutUnit position="center">
+        centro do site
+    </p:layoutUnit>
+ 
+</p:layout>
+</h:body>
+</html>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+
+<style>
+.ocupada .ui-panel-titlebar {
+    background: #38B0DE;
+    color:#000000;
+}
+#principal{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-260px;
+    margin-top:-135px;
+    width: 510px;
+    height: 315px;
+    border: 7px solid #999999;
+    padding: 30px;
+    text-align: left;
+    font-family: calibri;
+    font-size: 14px;
+    border-radius: 65px;
+}
+
+#msg1 
+ {
+    float: left;
+    padding: 15px;
+    font-family: Cambria;
+    font-size: 21px;
+    color: #6495ED;
+    text-align: left;
+ }
+ #msg2 
+ {
+    float: left;
+    padding: 15px;
+    font-family: calibri;
+    font-size: 14px;
+    color: #6495ED;
+    text-align: left;
+ }
+
+
+</style>
+
+<title>Login</title>
+
+</h:head>
+
+<h:body>
+
+ <div id="principal">
+<p:layout style="min-width:515px;min-height:290px;" id="layout">  
+    <p:layoutUnit position="west" resizable="true" size="270" minSize="250">  
+        
+    <p:panel position="center" required="true" style="width:253px; height: 33px; line-height: 20px;" header="Seja Bem Vindo" styleClass="ocupada"></p:panel>
+        
+        <div id="msg2">
+            Identifique-se para utilizar o sistema.
+        </div>
+        <h:panelGrid columns="2">
+        <h:outputLabel value="Usuario:" for="nome" />
+        <h:inputText id="nome" label="Nome" value="#{usuarioBean.nome}" required="true" style="width:170px; height: 15px; line-height: 15px;" />
+        <h:outputLabel value="Senha:" for="senha" />
+        <h:inputSecret id="senha" label="Senha" value="#{usuarioBean.senha}" required="true" style="width:170px; height: 15px; line-height: 15px;"/>
+        </h:panelGrid>
+
+         <div align="left"><br/>
+        		<p:commandButton value="Enviar" action="#{usuarioBean.salvar}" type="Submit" style="width: ; 
+              margin-left: 55px; margin-right: 5px;" /> 
+
+        		<p:commandButton value="Limpar" action="#{usuarioBean.limpar}" type="reset" style="width: ; 
+margin-left: 5px; margin-right: 5px;" />
+        </div>
+        
+        <div id="msg2">
+            Você ainda não tem uma conta?
+            <h:form><h:commandLink action="inicio" value="Cadastre-se"/></h:form>
+            <h:form>
+                <p:commandLink action="inicio" value="Esqueci minha senha"/>
+                
+            </h:form>
+        </div>
+    </p:layoutUnit>
+    <p:layoutUnit position="center" resizable="true" size="270" minSize="250">  
+       <p:graphicImage value="/imagens/login5.png" size="270" minSize="250" width="200px" height="70px" />
+    </p:layoutUnit>  
+</p:layout>
+</div>
+
+</h:body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<h:body>
+	<div align="center">
+		<p:graphicImage value="/imagens/Sol_Graficas-270x250.jpg" size="210"
+			minSize="250" width="1070px" height="170px"
+			style="width: ; margin-left: 5px; margin-right: 5px;" />
+	</div>
+	<h:form>
+		<p:panel header="Cadastro de Usuário">
+			<h:panelGrid columns="2" cellpadding="2">
+				<h:outputText value="Usuario: " />
+				<p:inputText value="#{usuarioBean.cliente}" />
+				<h:outputText value="Senha: " />
+				<p:password value="#{usuarioBean.senha}" password="true"
+					feedback="true" required="true" />
+				<h:outputText value="Confirmar: " />
+				<p:password value="#{usuarioBean.senha}" password="true"
+					feedback="bom" required="true" />
+				<h:outputText value="Email: " />
+				<p:inputText value="#{usuarioBean.email}" />
+				<h:outputText value="Nome Completo: " />
+				<p:inputText value="#{usuarioBean.nome}" />
+				<h:outputText value="Endereço: " />
+				<p:inputText value="#{usuarioBean.endereco}" />
+				<h:outputText value="Cep: " />
+				<p:inputMask value="#{usuarioBean.dataNascimento}" mask="99999-999" />
+				<h:outputText value="CPF: " />
+				<p:inputMask value="#{usuarioBean.dataNascimento}" mask="999.999.999-99" />
+				<h:outputText value="Telefone: " />
+				<p:inputMask value="#{usuarioBean.telefone}" mask="(99) 9999-9999" />
+			</h:panelGrid>
+
+			<div align="left">
+				<br />
+				<p:commandButton value="Enviar" action="#{usuarioBean.salvar}"
+					type="Submit" ajax="false"
+					style="width: 100px; 
+              margin-left: 175px; margin-right: 1px;" />
+
+				<p:commandButton value="Limpar" action="#{usuarioBean.limpar}"
+					type="reset" ajax="false"
+					style="width: 100px; 
+              margin-left: 5px; margin-right: 1px;" />
+			</div>
+
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
